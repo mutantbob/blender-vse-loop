@@ -33,10 +33,10 @@ class SequencerLoopMedia(bpy.types.Operator):
             SequencerLoopMedia.loop_media_op(ctx.scene, self.repeat_count)
             return {'FINISHED'}
         except ValueError as e:
-            self.report({'INFO'}, e.args[0])
+            self.report({'ERROR'}, e.args[0])
             return {'CANCELLED'}
         except AttributeError as e:
-            self.report({'INFO'}, e.args[0])
+            self.report({'ERROR'}, e.args[0])
             return {'CANCELLED'}
 
     @classmethod
