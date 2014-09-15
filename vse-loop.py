@@ -46,6 +46,9 @@ class SequencerLoopMedia(bpy.types.Operator):
     @classmethod
     def loop_media(cls, strip, scene, repeat_count):
 
+        if strip is None:
+            raise ValueError("you have not specified a strip to loop")
+
         speed_control = cls.find_speed_control_for(strip, scene)
 
 #        speed_control.use_default_fade = False
