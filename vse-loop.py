@@ -18,7 +18,7 @@ def quote_name(str):
     return '"'+str.replace('"', '\\"').replace('\\', '\\\\')+'"'
 
 class SequencerLoopMedia(bpy.types.Operator):
-    """creates or adjusts a Speed effect strip to loop the source strip's frames by putting a cyclic fcurve on the speed_factor which has been configured as frame_number instead"""
+    """Loop the source strip's frames by creating or adjusting a Speed effect strip with a cyclic fcurve on the speed_factor which has been configured as frame_number instead"""
     bl_idname = "sequencer.loop_media"
     bl_label = "Loop Media"
     bl_options = {'REGISTER', 'UNDO'}
